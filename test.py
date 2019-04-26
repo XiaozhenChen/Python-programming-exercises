@@ -14,13 +14,6 @@ class testClass(object):
 
 
 
-lines = []
-while True:
-    s = input()
-    if s:
-        lines.append(s.upper())
-    else:
-        break;
-
-for sentence in lines:
-    print(sentence)
+s = input()
+words = [word for word in s.split(" ")]
+print(" ".join(sorted(list(set(words)))))
