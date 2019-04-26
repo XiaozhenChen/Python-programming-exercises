@@ -13,21 +13,18 @@ class testClass(object):
         print(self.Str)
 
 
-s = input("请输入一行非负整数，以空格隔开，-1结束:")
-# s = '1 67 56 78 -1'
-list1 = s.split(',')
-list2 = []
-list3 = []
 
-for line in list1:
-    list2.append(int(line))
 
-import math
-c=50
-h=30
+input_str = input()
+dimensions=[int(x) for x in input_str.split(',')]
 
-for line in list2:
-   
-    list3.append(str(int(round(math.sqrt(2*c*float(line)/h))))) 
+rowNum = dimensions[0]
+colNum = dimensions[1]
 
-print( ','.join(list3))
+multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
+
+for row in range(rowNum):
+    for col in range(colNum):
+        multilist[row][col] =row * col
+
+print(multilist)
