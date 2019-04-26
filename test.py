@@ -14,10 +14,13 @@ class testClass(object):
 
 
 
+lines = []
+while True:
+    s = input()
+    if s:
+        lines.append(s.upper())
+    else:
+        break;
 
-input_str = input()
-items=[x for x in input_str.split(',')]
-
-items.sort()
-
-print(','.join(items))
+for sentence in lines:
+    print(sentence)
