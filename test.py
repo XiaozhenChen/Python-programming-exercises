@@ -82,6 +82,3 @@ li=list()
 for i in tp:
     if tp[i-1]%2==0:
         li.append(tp[i-1])
-tp2=tuple(li)
-print(tp2)
-print(tuple.__doc__)
