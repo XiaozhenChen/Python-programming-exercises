@@ -83,7 +83,13 @@ for i in tp:
     if tp[i-1]%2==0:
         li.append(tp[i-1])
 
-li = [1,2,3,4,5,6,7,8,9,10]
-#将filter转换成list
-evenNumbers =list( filter(lambda x: x%2==0, li))
-print(evenNumbers)
+def useFilter():
+    li = [1,2,3,4,5,6,7,8,9,10]
+    #将filter转换成list
+    evenNumbers =list( filter(lambda x: x%2==0, li))
+    print(evenNumbers)
+
+def useMapFilter():
+    li = [1,2,3,4,5,6,7,8,9,10]
+    evenNumbers = list(map(lambda x: x**2, filter(lambda x: x%2==0, li)))
+    print(evenNumbers)
