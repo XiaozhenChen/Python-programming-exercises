@@ -93,3 +93,56 @@ def useMapFilter():
     li = [1,2,3,4,5,6,7,8,9,10]
     evenNumbers = list(map(lambda x: x**2, filter(lambda x: x%2==0, li)))
     print(evenNumbers)
+
+class American(object):
+    def printNationality():
+        print("America")
+
+class NewYorker(American):
+    pass
+
+class circle(object):
+    def __init__(self,r):
+        self.radius = r
+    def area(self):
+        return self.radius**2 * 3.14
+
+class Shape(object):
+    def __init__(self):
+        pass
+
+    def area(self):
+        return 0
+
+class Square(Shape):
+    def __init__(self,l):
+        Shape.__init__(self)
+        self.length = l
+    def area(self):
+        return self.length**2
+
+def throws():
+    return 5/0
+
+def muErr():
+    try:
+        throws()
+    except ZeroDivisionError:
+        print("division by zero")
+    except Exception:
+        print("canght an exception")
+    finally:
+        print("in finally bolock for clearup")
+
+class MyError(Exception):
+    """My own exception class
+
+    Attributes:
+        msg  -- explanation of the error
+    """
+
+    def __init__(self, msg):
+        self.msg = msg
+
+error = MyError("something wrong")
+print(error)
